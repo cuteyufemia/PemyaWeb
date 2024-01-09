@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title></title>
+  
+</head>
+    <style>
+
+                 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 15px;
+    margin-left: 950px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav ul, nav i:hover {
+    color: aqua;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .product-listing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+       margin: 0 auto;
+        padding: 20px 20px 20px 20px ;
+    }
+
+    .price {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .product-container {
+        max-height: 800px; 
+        overflow-y: auto; 
+    }
+   
+
+    @font-face {
+  font-family: 'Allura';
+  src: url('../Font/allura_Regular.ttf') format('truetype');
+}
+         .first {
+    list-style-type: none;
+display: flex;
+
+align-items: center;
+margin: 0;
+padding: 15px;
+background-color: #808080;
+}
+
+ .last {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 2px;
+    background-color:  #f784c2;
+}
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.femia {
+    font-family: 'Allura', cursive;
+    font-size: 30px; 
+    color: #555;
+    font-weight: bold;
+    margin-right: 10px; 
+    flex-shrink: 0; 
+}
+
+    </style>
+<body>
+    <header>
+     
+
+    </header>
+    <nav>
+                  <div class="logo-container">
+<img src="flower/logo.png" alt="Your Logo" class="logo">
+<div class="femia">Mia FlowerShop</div>
+        <ul>
+                <li><a href="main.html">
+    <object data="Svg/house-solid.svg" type="image/svg+xml" class="svg-icon">Home</object>
+</a></li>
+    <li><a href="ProductCategory.html">
+    <object data="Svg/list-solid.svg" type="image/svg+xml" class="svg-icon">Category</object>
+</a></li>
+                             <li><a href="buy.html">
+    <object data="Svg/shopify.svg" type="image/svg+xml" class="svg-icon">shop</object>
+</a></li>
+           
+        </ul>
+             </div>
+    </nav>
+   
+     <main>
+        
+
+        <section>
+            <form>
+            <div class="dining">
+            <h2>Crochet Flowers Bouquet </h2>
+                <br />
+               
+                </div>
+                <br />
+                <br />
+                <br />
+                <div class="product-container">
+                    <div class="product-listing">
+                        <div class="product">
+                            <img src="crochet/c1.jpg" alt="My Image" height="450" width="430" />
+                            <h3>Crochet1</h3>
+                            <p>Description of Product 1</p>
+                            <p class="price">P20,000</p>
+                            <button type="button" onclick="redirectToBuyPage()">Buy Now</button>
+                        </div>
+                
+                        <div class="product">
+                            <img src="crochet/c2.jpg" alt="My Image" height="450" width="430" />
+                            <h3>Crochet2</h3>
+                            <p>Description of Product 2</p>
+                            <p class="price">P15,000</p>
+                            <button type="button" onclick="redirectToBuyPage()">Buy Now</button>
+                        </div>
+                
+                        <div class="product">
+                            <img src="crochet/c3.jpg" alt="My Image" height="450" width="430" />
+                            <h3>Crochet3</h3>
+                            <p>Description of Product 3</p>
+                            <p class="price">P10,000</p>
+                            <button type="button" onclick="redirectToBuyPage()">Buy Now</button>
+                        </div>
+                
+                        <div class="product">
+                            <img src="crochet/c4.jpg" alt="My Image" height="450" width="430" />
+                            <h3>Crochet4</h3>
+                            <p>Description of Product 4</p>
+                            <p class="price">P35,000</p>
+                            <button type="button" onclick="redirectToBuyPage()">Buy Now</button>
+                        </div>
+                
+                        <div class="product">
+                            <img src="crochet/c5.jpg" alt="My Image" height="450" width="430" />
+                            <h3>Crochet5</h3>
+                            <p>Description of Product 5</p>
+                            <p class="price">P35,000</p>
+                            <button type="button" onclick="redirectToBuyPage()">Buy Now</button>
+                        </div>
+                
+                        <div class="product">
+                            <img src="crochet/c6.jpg" alt="My Image" height="450" width="430" />
+                            <h3>Crochet6</h3>
+                            <p>Description of Product 6</p>
+                            <p class="price">P35,000</p>
+                            <button type="button" onclick="redirectToBuyPage()">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    function redirectToBuyPage() {
+                        window.location.href = 'buy.html';
+                    }
+                </script>
+                
+                 
+  
+                </form>
+        </section>
+    </main>
+</body>

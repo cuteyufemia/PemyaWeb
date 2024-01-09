@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia FlowerShop - Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+                       nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 15px;
+    margin-left: 1000px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav ul, nav i:hover {
+    color: aqua;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .table {
+            display: grid;
+            gap: 10px;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .table div {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+        }
+
+        .table label {
+            margin-right: 10px;
+        }
+
+        .submit-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .submit-button {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            @font-face {
+  font-family: 'Allura';
+  src: url('../Font/allura_Regular.ttf') format('truetype');
+}
+         .first {
+    list-style-type: none;
+display: flex;
+
+align-items: center;
+margin: 0;
+padding: 15px;
+background-color: #808080;
+}
+
+ .last {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 2px;
+    background-color:  #f784c2;
+}
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.femia {
+    font-family: 'Allura', cursive;
+    font-size: 30px; 
+    color: #555;
+    font-weight: bold;
+    margin-right: 10px; 
+    flex-shrink: 0; 
+}
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav>
+                <div class="logo-container">
+<img src="flower/logo.png" alt="Your Logo" class="logo">
+<div class="femia">Mia FlowerShop</div>
+                <ul>
+                       <li><a href="main.html">
+    <object data="Svg/house-solid.svg" type="image/svg+xml" class="svg-icon">Home</object>
+</a></li>
+    <li><a href="ProductCategory.html">
+    <object data="Svg/list-solid.svg" type="image/svg+xml" class="svg-icon">Category</object>
+</a></li>
+                                     <li><a href="buy.html">
+    <object data="Svg/shopify.svg" type="image/svg+xml" class="svg-icon">shop</object>
+</a></li>
+                </ul>
+                    </div>
+            </nav>
+               
+            
+        </header>
+
+        <div class="form-container">
+            <div class="table">
+                <div>
+                    <label for="txtCustomerId">Customer ID</label>
+                    <input type="text" id="txtCustomerId" runat="server" class="form-control" />
+                </div>
+                <div>
+                    <label for="txtCustomerName">Customer Name</label>
+                    <input type="text" id="txtCustomerName" runat="server" class="form-control" />
+                </div>
+                <div>
+                    <label for="txtProductName">Product Name</label>
+                    <input type="text" id="txtProductName" runat="server" class="form-control" />
+                </div>
+                <div>
+                    <label for="txtQuantity">Quantity</label>
+                    <input type="text" id="txtQuantity" runat="server" class="form-control" />
+                </div>
+              <div class="submit-button-container">
+    <button type="button" id="btnSubmit" class="submit-button" onclick="submitForm()">Submit</button>
+</div>
+
+            </div>
+        </div>
+        <script>
+            function submitForm() {
+                
+                alert('Order Completed');
+            }
+        </script>
+    </form>
+</body>
+</html>

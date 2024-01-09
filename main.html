@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mia Flower Shop</title>
+    <style>
+        nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       padding: 10px;
+  }
+  
+  nav ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-size: 15px;
+      margin-left: 950px;
+  }
+  
+  nav li {
+      margin-right: 20px;
+  }
+  
+  nav ul, nav i:hover {
+      color: aqua;
+  }
+  
+  nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+  }
+           
+  
+  
+      .product-listing {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+  
+      .product {
+          width: calc(50% - 10px); 
+          margin-bottom: 20px;
+      }
+  
+      .price {
+          font-weight: bold;
+          color: #555;
+      }
+  
+      .product-container {
+          max-height: 400px;
+          overflow-y: auto; 
+      }
+  
+     .slideshow {
+      position: relative;
+      height: 350px;
+      width: 50%;
+      float: left; 
+      overflow: hidden;
+  }
+  
+  
+  .slide {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      height: 498px;
+      width: 100%; 
+  }
+  
+  .slide.active {
+      opacity: 1;
+  }
+  
+  
+      .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+  }
+  
+  
+  .item {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+  }
+  
+  
+  
+  
+  @media (max-width: 600px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      }
+  
+      .item {
+          padding: 10px;
+      }
+  }
+  
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      }
+  }
+  
+  
+  
+  @media (max-width: 600px) {
+  }
+  
+  
+  @media (min-width: 901px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+  }
+  
+  .picture-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .picture {
+    width: 25%; 
+    margin-right: 10px; 
+  
+   .picture-container {
+      flex-wrap: wrap;
+    }
+  
+    .picture {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px; 
+    }
+  }
+  
+  .background-container {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    background-image: url('~/image/fur1.jpg'); 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .text-overlay h2 {
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold;
+  }
+  
+  .text-overlay p {
+    color: white; 
+    font-size: 16px; 
+  }
+  
+  @font-face {
+    font-family: 'Allura';
+    src: url('../Font/allura_Regular.ttf') format('truetype');
+  }
+     
+      .footer{
+           list-style-type: none;
+          display: flex;
+          
+       
+          margin: 0;
+          padding: 100px;
+          background-color: grey;
+  
+      }
+      .image-container {
+    position: relative;
+    display: inline-block;
+    overflow-x:hidden;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 443px;
+    height: 350px;
+    
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .text-overlay h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .text-overlay p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .text-overlay button {
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .shop-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .shop-button:hover {
+    background-color: #23527c;
+  }
+  
+  
+  
+  
+  .product-listing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+  }
+  
+  .product {
+      width: calc(33.33% - 4px); 
+      margin: 2px; 
+      box-sizing: border-box;
+  }
+  
+  .product-image {
+    width: 430px;
+    height: 430px;
+    object-fit: cover;
+}
+  
+  
+  @media (max-width: 1200px) {
+      .product {
+          width: calc(50% - 4px);
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .product {
+          width: calc(100% - 4px);
+      }
+  }
+  
+  
+  
+    .price {
+        font-weight: bold;
+        color: #555;
+    }
+  
+    .product-container {
+        max-height: 800px; 
+    }
+    .dining {
+         list-style-type: none;
+        display: flex;
+        text-align:center;
+        align-items: center;
+        margin: 0;
+        padding: 30px;
+        background-color: lightgrey;
+        
+  
+    }
+    .first {
+      list-style-type: none;
+  display: flex;
+  
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+  background-color: #808080;
+  }
+  
+   .last {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 2px;
+      background-color:  #555;
+  }
+   .logo-container {
+      display: flex;
+      align-items: center;
+  }
+  
+  .logo {
+      width: 50px; 
+      height: auto; 
+      margin-right: 10px; 
+  }
+  
+  .femia {
+      font-family: 'Allura', cursive;
+      font-size: 30px; 
+      color: #555;
+      font-weight: bold;
+      margin-right: 10px; 
+      flex-shrink: 0; 
+  }
+  
+  
+      </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <div class="logo-container">
+            <img src="flower/logo.png" alt="Your Logo" class="logo">
+            <div class="femia">Mia FlowerShop</div>
+            <ul>
+                <li>
+                    <a href="main.html">
+                        <object data="Svg/house-solid.svg" type="image/svg+xml" class="svg-icon">Home</object>
+                    </a>
+                </li>
+                <li>
+                    <a href="ProductCategory.html">
+                        <object data="Svg/list-solid.svg" type="image/svg+xml" class="svg-icon">Category</object>
+                    </a>
+                </li>
+                <li>
+                    <a href="buy.html">
+                        <object data="Svg/shopify.svg" type="image/svg+xml" class="svg-icon">Shop</object>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="item">
+        
+                <div class="slideshow">
+                    <img src="artificial/ar4.jpg" alt="Slide 1" class="slide active">
+                    <img src="crochet/c1.jpg" alt="Slide 2" class="slide">
+                    <img src="pure/p2.jpg" alt="Slide 3" class="slide">
+                </div>
+
+               
+            <div class="product-container">
+                <div class="product-listing">
+          <div class="picture-container">
+              
+            <div class="image-container">
+     <img src="pure/p1.jpg" alt="Product Image">
+     <div class="text-overlay">
+       <h2>Pure Flowers</h2>
+     
+      <a href="pure.html" class="shop-button">Shop Now</a>
+     </div>
+       <br />
+       <br />
+   
+   </div>
+                    <div class="image-container">
+     <img src="artificial/ar1.jpg" alt="Product Image">
+     <div class="text-overlay">
+       <h2>Artificial Flowers</h2>
+      
+       <a href="artificial.html" class="shop-button">Shop Now</a>
+     </div>
+   </div>
+                    <br />
+                    <br />
+   
+   <div class="image-container">
+     <img src="crochet/c1.jpg" alt="Product Image">
+     <div class="text-overlay">
+       <h2>Crochet Flowers</h2>
+     
+       <a href="crochet.html" class="shop-button">Shop Now</a>
+     </div>
+   </div>
+   
+                    <br />
+                    <br />
+   
+   
+                   </div>
+                    </div>
+                   </div>
+   
+                       <div>
+                           <div class="first">
+   
+                           </div>
+               
+                    
+
+                        <h1>Best Sellers</h1>
+
+<br />
+<br />
+<br />
+<div class="product-listing">
+    <div class="product">
+        <img src="crochet/c5.jpg" alt="My Image" height="450" width="430" />
+        <h3>Crochet</h3>
+        <p>Description of Product 1</p>
+        <p class="price">P20,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="artificial/ar2.jpg" alt="My Image" height="450" width="430" />
+        <h3>Artificial Bouquet</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P15,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="pure/p3.jpg" alt="My Image" height="450" width="430" />
+        <h3>White Flower Bouquet</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P10,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="flower/pic4.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower4</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="flower/pic5.jpg" alt="My Image" height="450" width="430" />
+        <h3>Rose Bouquet</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="flower/pic6.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower6</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="crochet/c6.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower7</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="artificial/ar6.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower8</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="pure/p4.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower9</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="crochet/c3.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower10</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="pure/p5.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower11</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="artificial/ar2.jpg" alt="My Image" height="450" width="430" />
+        <h3>Flower12</h3>
+        <p>Description of Product 2</p>
+        <p class="price">P35,000</p>
+        <button onclick="redirectToBuyPage()">Buy Now</button>
+    </div>
+</div>
+
+
+                  
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    </div>
+    <div>
+        <h1>Flower Delivery Philippines - Send bouquets of flowers to Luzon, Visayas, Mindanao</h1>
+        <br />
+        <p>Mia FlowerShop is the best-rated online gift shop and flower delivery in the Philippines. Delivering specially crafted flower bouquets and gift boxes to your loved ones all over Metro Manila, Metro Cebu, Davao City, and over 50 other cities with FREE same-day delivery. We also provide FREE nationwide shipping on selected products.</p>
+        <br />
+        <p>Show your love and appreciation by sending gifts and fresh flowers to your loved ones. We have over a hundred expertly designed and beautifully hand-crafted fresh flower arrangements made by the best florists in the Philippines, and gift items to choose from and perfect for any occasion such as anniversaries, romantic occasions, birthdays, grand openings/inaugurals, birth of a new baby, funerals and condolences, Mother's Day, Father's Day, Valentine's and many more.</p>
+        <br />
+        <h4> FLower Delivery to Manila</h4>
+        <p>From Cebu City, we are now bringing our expertly crafted floral bouquets and arrangements to Manila! Gift and flower delivery to Manila has never been easier with Mia FlowerShop's expert delivery services. Explore an online store with hundreds of gifts and arrangements specially made for several occasions.</p>
+        
+   
+   
+   
+    </div>
+
+        <div class="last"></div>
+
+        <script>
+            
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            function showSlide() {
+                slides.forEach((slide) => {
+                    slide.classList.remove('active');
+                });
+
+                slides[currentSlide].classList.add('active');
+
+                currentSlide++;
+                if (currentSlide === slides.length) {
+                    currentSlide = 0;
+                }
+
+                setTimeout(showSlide, 3000);
+            }
+
+            showSlide();
+        </script>
+        
+        <script>
+            function redirectToBuyPage() {
+                
+                window.location.href = 'buy.html';
+            }
+        </script
+    </main>
+</body>
+</html>

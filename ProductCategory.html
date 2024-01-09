@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+
+<head runat="server">
+    <title></title>
+  
+</head>
+    <style>
+    
+
+           nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 15px;
+    margin-left: 950px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav ul, nav i:hover {
+    color: aqua;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .product-listing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .price {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .product-container {
+        max-height: 800px;
+        overflow-y: auto;
+    }
+
+    @font-face {
+        font-family: 'Allura';
+        src: url('../Font/allura_Regular.ttf') format('truetype');
+    }
+
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+    }
+
+    .text-overlay h2 {
+        font-size: 4vw; 
+        font-weight: bold;
+        margin-bottom: 1.5vw;
+    }
+
+    .text-overlay p {
+        font-size: 2vw; 
+        margin-bottom: 2vw;
+    }
+
+    .text-overlay button {
+        padding: 1vw 2vw; 
+        background-color: #f00;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .shop-button {
+        display: inline-block;
+        padding: 1vw 2vw;
+        background-color: #337ab7;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .shop-button:hover {
+        background-color: #23527c;
+    }
+
+   
+    @media only screen and (max-width: 768px) {
+        nav ul {
+            margin-left: 0;
+        }
+
+        .image-container img {
+            height: 300px; 
+        }
+
+        .text-overlay h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .text-overlay p {
+            font-size: 14px; 
+            margin-bottom: 20px;
+        }
+
+        .text-overlay button,
+        .shop-button {
+            padding: 10px 20px; 
+        }
+    }
+
+      .first {
+    list-style-type: none;
+display: flex;
+
+align-items: center;
+margin: 0;
+padding: 15px;
+background-color: #808080;
+}
+
+ .last {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 2px;
+    background-color:  #f784c2;
+}
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.femia {
+    font-family: 'Allura', cursive;
+    font-size: 30px;
+    color: #555;
+    font-weight: bold;
+    margin-right: 10px; 
+    flex-shrink: 0; 
+}
+
+</style>
+<body>
+    <header>
+        
+    </header>
+    <nav>
+         <div class="logo-container">
+<img src="flower/logo.png" alt="Your Logo" class="logo">
+<div class="femia">Mia FlowerShop</div>
+ 
+        <ul>
+                <li><a href="main.html">
+    <object data="Svg/house-solid.svg" type="image/svg+xml" class="svg-icon">Home</object>
+</a></li>
+    <li><a href="ProductCategory.html">
+    <object data="Svg/list-solid.svg" type="image/svg+xml" class="svg-icon">Category</object>
+</a></li>
+                 <li><a href="buy.html">
+    <object data="Svg/shopify.svg" type="image/svg+xml" class="svg-icon">shop</object>
+</a></li>
+          
+             
+        </ul>
+             </div>
+    </nav>
+   
+     <main>
+        
+
+            <form id="form1" runat="server">
+            
+            <div class="product-container">
+             <div class="product-listing">
+
+<div class="image-container">
+  <img src="crochet/c1.jpg" alt="Product Image">
+  <div class="text-overlay">
+    <h2>Crochet Flowers</h2>
+    <p>Embrace the artistry of handcrafted elegance with our Crochet Flowers, where delicate threads intertwine to form unique and charming blooms, perfect for adding a touch of warmth to any space.</p>
+   <a href="crochet.html" class="shop-button">Shop Now</a>
+  </div>
+    <br />
+    <br />
+
+</div>
+                 <div class="image-container">
+  <img src="artificial/ar1.jpg" alt="Product Image">
+  <div class="text-overlay">
+    <h2>Artificial Flowers</h2>
+    <p>Capturing the timeless allure of nature, our Artificial Flowers showcase lifelike blooms that endure in perpetual splendor, adding everlasting grace to your surroundings</p>
+    <a href="artificial.html" class="shop-button">Shop Now</a>
+  </div>
+</div>
+                 <br />
+                 <br />
+
+<div class="image-container">
+  <img src="pure/p1.jpg" alt="Product Image">
+  <div class="text-overlay">
+    <h2>Pure Flowers</h2>
+    <p>Delicate petals intertwined with vibrant hues, our exquisite Flower1 blossoms with elegance, bringing a touch of nature's beauty into your space.</p>
+    <a href="pure.html" class="shop-button">Shop Now</a>
+  </div>
+</div>
+
+                 <br />
+                 <br />
+                 <div class="last">
+
+                 </div>
+
+
+
+
+       
+            </div>
+                </div>
+                 
+  
+                </form>
+    
+    </main>
+</body>
+
